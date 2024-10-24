@@ -1,0 +1,10 @@
+#!/bin/bash
+
+DB_USER="{{ wp_mysql_user }}"
+DB_PASSWORD="{{ wp_mysql_password }}"
+DB_NAME="{{ wp_mysql_db }}"
+BACKUP_DIR="{{ backup_dir }}"
+DATE=$(date +"%d.%m.%Y_%H.%M")
+BACKUP_FILE="$BACKUP_DIR/backup_$DATE.sql"
+
+mysqldump -u $DB_USER -p$DB_PASSWORD $DB_NAME > $BACKUP_FILE

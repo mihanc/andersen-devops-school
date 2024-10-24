@@ -1,0 +1,13 @@
+wp_version: "6.6.2"
+wp_mysql_db: "{{ lookup('ansible.builtin.env', 'WP_MYSQL_DB') }}"
+wp_mysql_user: "{{ lookup('ansible.builtin.env', 'WP_MYSQL_USER') }}"
+wp_mysql_password: "{{ lookup('ansible.builtin.env', 'WP_MYSQL_PASSWORD') }}"
+wp_sitename: "devops-school-wp"
+wp_db_host: "localhost"
+wp_db_charset: "utf8"
+wp_db_collate: ""
+wp_table_prefix: "wp_"
+wp_debug: false
+wp_admin_email: "{{ lookup('ansible.builtin.env', 'WP_ADMIN_EMAIL') }}"
+wp_install_dir: "/var/www/devops-school-wp"
+backup_dir: "/opt/backups_wordpress"

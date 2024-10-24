@@ -1,0 +1,4 @@
+---
+- name: Load environment variables
+  shell: |
+    export $(grep -v '^#' .env | tr -d '\r' | xargs)
